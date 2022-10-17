@@ -1,0 +1,25 @@
+[33mcommit 7aced0e24d0059d00b18408bfda75fdb23318ad0[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Michal Lesiak <m.lesiaq@gmail.com>
+Date:   Tue Oct 11 22:26:14 2022 +0200
+
+    Revert "Navigation added"
+    
+    This reverts commit c8ec36c3adf42a8af181e0b417db574487d9fb5b.
+
+[33mcommit c8ec36c3adf42a8af181e0b417db574487d9fb5b[m
+Author: Michal Lesiak <m.lesiaq@gmail.com>
+Date:   Tue Oct 11 21:33:28 2022 +0200
+
+    Navigation added
+
+[33mcommit 47d5e8fd4ff5d9f080fe9d97144e3c5c4bc5904a[m
+Author: Michal Lesiak <m.lesiaq@gmail.com>
+Date:   Wed Sep 28 21:26:29 2022 +0200
+
+    react initial commit'
+
+[33mcommit f8dc0099da517c69af1a9fae498fe94cea92636d[m
+Author: Michal Lesiak <m.lesiaq@gmail.com>
+Date:   Wed Sep 28 21:03:58 2022 +0200
+
+    first commit
