@@ -4,6 +4,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Avatar from "@mui/material/Avatar";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+
+const buttonStyles = { my: 2, color: "white", display: "block" };
 
 export const Navigation = () => {
   return (
@@ -14,10 +17,14 @@ export const Navigation = () => {
             alt="logo"
             src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png"
           />
-          <Button sx={{ my: 2, color: "white", display: "block" }}>
+          <Button component={Link} to="/" sx={{ ml: 2, ...buttonStyles }}>
+            HOME
+          </Button>
+
+          <Button component={Link} to="/burgers" sx={buttonStyles}>
             BURGERS
           </Button>
-          <Button sx={{ my: 2, color: "white", display: "block" }}>
+          <Button component={Link} to="/admin" sx={buttonStyles}>
             ADMIN
           </Button>
         </Toolbar>
