@@ -21,8 +21,8 @@ export const Navigation = () => {
             HOME
           </Button>
 
-          <Button component={Link} to="/burgers" sx={buttonStyles}>
-            BURGERS
+          <Button component={Link} to="/menu" sx={buttonStyles}>
+            MENU
           </Button>
           <Button component={Link} to="/admin" sx={buttonStyles}>
             ADMIN

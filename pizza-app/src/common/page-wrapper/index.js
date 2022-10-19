@@ -5,6 +5,7 @@ export const PageWrapper = ({ title, children }) => {
     <div
       style={{
         marginTop: "30px",
+        padding: "0 30px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
