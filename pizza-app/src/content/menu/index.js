@@ -11,7 +11,12 @@ import Paper from "@mui/material/Paper";
 
 export const Menu = () => {
   useEffect(() => {
-    console.log("siemka");
+    fetch("http://localhost:3000/menu")
+      .then((r) => r.json())
+      .then((data) => {
+        const formattedValue = data;
+        console.log(formattedValue);
+      });
   }, []);
 
   return (
