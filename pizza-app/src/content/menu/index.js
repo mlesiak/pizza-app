@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { PageWrapper } from "../../common/page-wrapper";
 import * as React from "react";
 import Table from "@mui/material/Table";
@@ -9,6 +10,10 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 export const Menu = () => {
+  useEffect(() => {
+    console.log("siemka");
+  }, []);
+
   return (
     <PageWrapper title="Menu">
       <TableContainer component={Paper}>
