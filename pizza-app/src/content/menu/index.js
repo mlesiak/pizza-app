@@ -8,6 +8,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { Link } from "react-router-dom";
 
 export const Menu = () => {
   const [pizzas, setPizzas] = useState([]);
@@ -36,7 +37,9 @@ export const Menu = () => {
             {pizzas.map((pizza) => {
               return (
                 <TableRow key={pizza.id}>
-                  <TableCell>{pizza.name}</TableCell>
+                  <TableCell>
+                    <Link to={`/menu/${pizza.id}`}>{pizza.name}</Link>
+                  </TableCell>
                   <TableCell align="right">{pizza.ingredients}</TableCell>
                   <TableCell align="right">{pizza.price}</TableCell>
                 </TableRow>
