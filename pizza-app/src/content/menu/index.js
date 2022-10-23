@@ -10,12 +10,14 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 export const Menu = () => {
+  const [pizzas, setPizzas] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:3000/menu")
       .then((r) => r.json())
       .then((data) => {
         const formattedValue = data;
-        console.log(formattedValue);
+        setPizzas(formattedValue);
       });
   }, []);
 
@@ -30,7 +32,17 @@ export const Menu = () => {
               <TableCell align="right">Price</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody></TableBody>
+          <TableBody>
+            {pizzas.map((pizza) => {
+              return (
+                <TableRow key={pizza.id}>
+                  <TableCell>{pizza.name}</TableCell>
+                  <TableCell align="right">{pizza.ingredients}</TableCell>
+                  <TableCell align="right">{pizza.price}</TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
         </Table>
       </TableContainer>
     </PageWrapper>
