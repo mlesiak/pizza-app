@@ -8,6 +8,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { AddPizza } from "./add-pizza";
 
 export const Admin = () => {
   const [pizzas, setPizzas] = useState([]);
@@ -45,6 +46,7 @@ export const Admin = () => {
           </TableBody>
         </Table>
       </TableContainer>
+      <AddPizza />
     </PageWrapper>
   );
 };
