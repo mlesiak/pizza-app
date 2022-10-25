@@ -8,6 +8,26 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { useState } from "react";
 
 export const AddPizzaModal = ({ isOpen, handleClose }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    ingredients: "",
+    price: "",
+    url: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const { name, ingredients, price, url } = formData;
+
+  const handleAdd = () => {
+    console.log(JSON.stringify(formData, null, 2));
+  };
+
   return (
     <Dialog open={isOpen} onClose={handleClose} fullWidth>
       <DialogTitle>Add new Pizza</DialogTitle>
@@ -20,6 +40,9 @@ export const AddPizzaModal = ({ isOpen, handleClose }) => {
           type="text"
           fullWidth
           variant="standard"
+          value={name}
+          name="name"
+          onChange={handleChange}
         />
         <TextField
           autoFocus
@@ -29,6 +52,9 @@ export const AddPizzaModal = ({ isOpen, handleClose }) => {
           type="text"
           fullWidth
           variant="standard"
+          value={ingredients}
+          name="ingredients"
+          onChange={handleChange}
         />
         <TextField
           autoFocus
@@ -38,6 +64,9 @@ export const AddPizzaModal = ({ isOpen, handleClose }) => {
           type="number"
           fullWidth
           variant="standard"
+          value={price}
+          name="price"
+          onChange={handleChange}
         />
         <TextField
           autoFocus
@@ -47,11 +76,14 @@ export const AddPizzaModal = ({ isOpen, handleClose }) => {
           type="text"
           fullWidth
           variant="standard"
+          value={url}
+          name="url"
+          onChange={handleChange}
         />
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose}>Cancel</Button>
-        <Button variant="contained" onClick={handleClose}>
+        <Button variant="contained" onClick={handleAdd}>
           Add
         </Button>
       </DialogActions>
