@@ -1,11 +1,50 @@
 {
-    "menu": [
-      { "id": 0, "name": "Marinara", "ingredients": "tomato sauce, garlic", "price": 18, "url": "https://assets.tmecosys.com/image/upload/t_web600x528/img/recipe/vimdb/83535.jpg" },
-      { "id": 1, "name": "Margherita", "ingredients": "tomato sauce, mozarella", "price": 20 },
-      { "id": 2, "name": "Capriciosa", "ingredients": "tomato sauce, mozarella, mushrooms, ham", "price": 24, "url": "https://www.unileverfoodsolutions.pl/dam/global-ufs/mcos/NEE/calcmenu/recipes/PL-recipes/general/pizza-capriciosa/main-header.jpg" },
-      { "id": 3, "name": "Salami", "ingredients": "tomato sauce, mozarella, salami", "price": 24 },
-      { "id": 4, "name": "Diavola", "ingredients": "tomato sauce, mozarella, salami piccante, japaleno", "price": 25 },
-      { "id": 5, "name": "Tartufo", "ingredients": "truffle paste, salami piccante, mozarella, tomato", "price": 28, "url": "https://static.pyszne.pl/images/restaurants/pl/001R1O7N/products/tartufo_002.png" }
-    ]
-  }
-  
+  "menu": [
+    {
+      "id": 0,
+      "name": "Marinara",
+      "ingredients": "tomato sauce, garlic",
+      "price": 18,
+      "url": "https://assets.tmecosys.com/image/upload/t_web600x528/img/recipe/vimdb/83535.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Margherita",
+      "ingredients": "tomato sauce, mozarella",
+      "price": 20
+    },
+    {
+      "id": 2,
+      "name": "Capriciosa",
+      "ingredients": "tomato sauce, mozarella, mushrooms, ham",
+      "price": 24,
+      "url": "https://www.unileverfoodsolutions.pl/dam/global-ufs/mcos/NEE/calcmenu/recipes/PL-recipes/general/pizza-capriciosa/main-header.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Salami",
+      "ingredients": "tomato sauce, mozarella, salami",
+      "price": 24
+    },
+    {
+      "id": 4,
+      "name": "Diavola",
+      "ingredients": "tomato sauce, mozarella, salami piccante, japaleno",
+      "price": 25
+    },
+    {
+      "id": 5,
+      "name": "Tartufo",
+      "ingredients": "truffle paste, salami piccante, mozarella, tomato",
+      "price": 28,
+      "url": "https://static.pyszne.pl/images/restaurants/pl/001R1O7N/products/tartufo_002.png"
+    },
+    {
+      "name": "aaa",
+      "ingredients": "ss",
+      "price": "22",
+      "url": "11",
+      "id": 6
+    }
+  ]
+}

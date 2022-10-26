@@ -25,9 +25,15 @@ export const AddPizzaModal = ({ isOpen, handleClose }) => {
   const { name, ingredients, price, url } = formData;
 
   const handleAdd = () => {
-    console.log(JSON.stringify(formData, null, 2));
+    fetch("http://localhost:3000/menu", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
   };
-
   return (
     <Dialog open={isOpen} onClose={handleClose} fullWidth>
       <DialogTitle>Add new Pizza</DialogTitle>
