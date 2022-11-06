@@ -9,6 +9,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { AddPizza } from "./add-pizza";
+import { PizzaRow } from "./pizza-row";
 
 export const Admin = () => {
   const [pizzas, setPizzas] = useState([]);
@@ -40,11 +41,7 @@ export const Admin = () => {
           <TableBody>
             {pizzas.map((pizza) => {
               return (
-                <TableRow key={pizza.id}>
-                  <TableCell>{pizza.name}</TableCell>
-                  <TableCell align="right">{pizza.ingredients}</TableCell>
-                  <TableCell align="right">{pizza.price}</TableCell>
-                </TableRow>
+                <PizzaRow key={pizza.id} pizza={pizza} refresh={fetchPizzas} />
               );
             })}
           </TableBody>
