@@ -7,7 +7,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useState } from "react";
 
-export const AddPizzaModal = ({ isOpen, handleClose }) => {
+export const AddPizzaModal = ({ isOpen, handleClose, refresh }) => {
   const [formData, setFormData] = useState({
     name: "",
     ingredients: "",
@@ -32,6 +32,9 @@ export const AddPizzaModal = ({ isOpen, handleClose }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
+    }).then(() => {
+      handleClose();
+      refresh();
     });
   };
   return (

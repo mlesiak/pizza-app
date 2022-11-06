@@ -13,13 +13,17 @@ import { AddPizza } from "./add-pizza";
 export const Admin = () => {
   const [pizzas, setPizzas] = useState([]);
 
-  useEffect(() => {
+  const fetchPizzas = () => {
     fetch("http://localhost:3000/menu")
       .then((r) => r.json())
       .then((data) => {
         const formattedValue = data;
         setPizzas(formattedValue);
       });
+  };
+
+  useEffect(() => {
+    fetchPizzas();
   }, []);
 
   return (
@@ -46,7 +50,7 @@ export const Admin = () => {
           </TableBody>
         </Table>
       </TableContainer>
-      <AddPizza />
+      <AddPizza refresh={fetchPizzas} />
     </PageWrapper>
   );
 };

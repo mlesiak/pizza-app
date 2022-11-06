@@ -3,7 +3,7 @@ import Fab from "@mui/material/Fab";
 import Icon from "@mui/material/Icon";
 import { AddPizzaModal } from "./modal";
 
-export const AddPizza = () => {
+export const AddPizza = ({ refresh }) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -19,7 +19,11 @@ export const AddPizza = () => {
       <Fab variant="contained" color="primary" onClick={handleClickOpen}>
         <Icon>add</Icon>
       </Fab>
-      <AddPizzaModal isOpen={open} handleClose={handleClose} />
+      <AddPizzaModal
+        isOpen={open}
+        handleClose={handleClose}
+        refresh={refresh}
+      />
     </div>
   );
 };
