@@ -55,6 +55,7 @@ export const Admin = () => {
                   pizza={pizza}
                   key={pizza.id}
                   cancelEditMode={cancelEditMode}
+                  refresh={fetchPizzas}
                 />
               ) : (
                 <PizzaRow
