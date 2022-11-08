@@ -10,9 +10,11 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { AddPizza } from "./add-pizza";
 import { PizzaRow } from "./pizza-row";
+import { EditPizzaRow } from "./edit-pizza-row";
 
 export const Admin = () => {
   const [pizzas, setPizzas] = useState([]);
+  const [editId, setEditId] = useState(null);
 
   const fetchPizzas = () => {
     fetch("http://localhost:3000/menu")
@@ -21,6 +23,14 @@ export const Admin = () => {
         const formattedValue = data;
         setPizzas(formattedValue);
       });
+  };
+
+  const enterEditMode = (id) => {
+    setEditId(id);
+  };
+
+  const cancelEditMode = () => {
+    setEditId(null);
   };
 
   useEffect(() => {
@@ -39,11 +49,22 @@ export const Admin = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {pizzas.map((pizza) => {
-              return (
-                <PizzaRow key={pizza.id} pizza={pizza} refresh={fetchPizzas} />
-              );
-            })}
+            {pizzas.map((pizza) =>
+              pizza.id === editId ? (
+                <EditPizzaRow
+                  pizza={pizza}
+                  key={pizza.id}
+                  cancelEditMode={cancelEditMode}
+                />
+              ) : (
+                <PizzaRow
+                  key={pizza.id}
+                  pizza={pizza}
+                  refresh={fetchPizzas}
+                  enterEditMode={enterEditMode}
+                />
+              )
+            )}
           </TableBody>
         </Table>
       </TableContainer>
